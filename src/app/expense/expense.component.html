@@ -1,0 +1,28 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Expense Name</th>
+    <th>Cost</th>
+    <th>Description</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let expense of expenseServ.expenseAll; let i = index">
+    <th>{{i}}</th>
+    <th>{{expense.name}}</th>
+    <th>{{expense.cost}}</th>
+    <th>{{expense.description}}</th>
+    <th>{{expense.date}}</th>
+    <th>{{expense.time}}</th>
+    <th> <button (click)="update(i)" class="btn btn-default"> Update</button>
+      <button (click)="delete(i)" class="btn btn-danger"> Delete </button>
+    </th>
+  </tr>
+  </tbody>
+</table>
+
+<router-outlet></router-outlet>

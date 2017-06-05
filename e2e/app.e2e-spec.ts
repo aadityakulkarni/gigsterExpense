@@ -9,6 +9,7 @@ describe('gigster-expense App', () => {
 
   it('should display message saying app works', () => {
     page.navigateTo();
+    console.log(page.getParagraphText());
     expect(page.getParagraphText()).toEqual('app works!');
   });
 });
